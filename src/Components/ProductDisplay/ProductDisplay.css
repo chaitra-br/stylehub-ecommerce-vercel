@@ -1,0 +1,148 @@
+.productdisplay {
+  display: flex;
+  gap: 80px;
+  padding: 60px 10%;
+  color: #ffffff;
+}
+
+.productdisplay-left {
+  display: flex;
+  gap: 28px;
+  padding-left: 120px;
+}
+
+.productdisplay-img-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.productdisplay-img-list img {
+  width: 70px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #333;
+  transition: border 0.2s ease;
+}
+
+.productdisplay-img-list img:hover {
+  border-color: #9fd3c7;
+}
+
+.productdisplay-main-img {
+  width: 420px;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.productdisplay-right {
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-title {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.price {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #cfcfcf;
+  margin-bottom: 28px;
+}
+
+/* SIZE */
+.sizes {
+  margin-bottom: 24px;
+}
+
+.size-label {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.size-options {
+  display: flex;
+  gap: 12px;
+}
+
+.size-options button {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid #444;
+  color: #fff;
+  cursor: pointer;
+}
+
+.size-options button.active {
+  background: #9fd3c7;
+  color: #000;
+  border-color: transparent;
+}
+
+.error-text {
+  color: #ff6b6b;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.add-btn {
+  margin-top: 10px;
+  width: 260px;
+  height: 48px;
+  border-radius: 30px;
+  background: #9fd3c7;
+  color: #000;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.add-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.add-btn.added {
+  background: #4caf50;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(76, 175, 80, 0.5);
+}
+/* -------- Responsive -------- */
+
+@media (max-width: 900px) {
+  .productdisplay {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .productdisplay-main-img {
+    max-width: 100%;
+  }
+}

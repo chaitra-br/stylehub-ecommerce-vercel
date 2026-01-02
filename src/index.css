@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'poppins';
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  /* ===== THEME 3 — DARK (Sage × Charcoal) ===== */
+
+  --color-primary: #5F8D7E;        /* sage green */
+  --color-primary-hover: #4E7C6E;
+
+  --color-bg: #0E1312;             /* main background */
+  --color-surface: #161C1B;        /* navbar, cards */
+
+  --color-text-primary: #FFFFFF;
+  --color-text-muted: #A7B1AE;
+
+  --color-accent: #D4A373;         /* warm gold accent */
+  --color-border: #24302E;
+}

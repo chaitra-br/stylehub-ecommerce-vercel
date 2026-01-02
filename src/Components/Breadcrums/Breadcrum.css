@@ -1,0 +1,46 @@
+.breadcrum {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 40px 10%;
+  color: var(--color-text-muted);
+}
+
+/* Links */
+.breadcrum-link {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrum-link:hover {
+  color: var(--color-primary);
+}
+
+/* Current page */
+.breadcrum-current {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+/* Arrow icon */
+.breadcrum img {
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .breadcrum {
+    margin: 30px 8%;
+  }
+}
+
+@media (max-width: 800px) {
+  .breadcrum {
+    margin: 20px 5%;
+    font-size: 13px;
+  }
+}
