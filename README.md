@@ -50,7 +50,7 @@ Vercel (deployment)
 🚀 Live Demo
 
 🔗 Live Site:
-👉 https://stylehub-ecommerce.vercel.app
+👉 https://stylehub-ecommerce-vercel.vercel.app/
 
 🧪 Getting Started Locally
 
