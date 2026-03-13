@@ -1,7 +1,14 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -10,10 +17,12 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text-primary);
 }
+
 a{
   text-decoration: none;
   color: inherit;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

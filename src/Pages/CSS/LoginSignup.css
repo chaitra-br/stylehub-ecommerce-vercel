@@ -73,3 +73,10 @@
   font-size: 13px;
   color: #888;
 }
+
+@media (max-width: 900px) {
+  .loginsignup-container {
+    width: 90%;
+    max-width: 900px;
+  }
+}

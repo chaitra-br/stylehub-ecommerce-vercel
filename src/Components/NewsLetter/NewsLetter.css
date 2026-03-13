@@ -62,4 +62,23 @@
   .newsletter div {
     height: 48px;
   }
+
+  .newsletter input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    padding: 14px 18px;
+    outline: none;
+    font-size: 14px;
+  }
+
+  .newsletter button {
+    padding: 14px 18px;
+    background: var(--color-primary);
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
 }

@@ -37,9 +37,9 @@ const CartItems = () => {
                 </div>
               </div>
 
-              <p>${product.new_price}</p>
-              <p>{item.qty}</p>
-              <p>${product.new_price * item.qty}</p>
+              <p className="cart-price">${product.new_price}</p>
+              <p className="cart-qty-value">{item.qty}</p>
+              <p className="cart-total">${product.new_price * item.qty}</p>
 
               <img
                 src={remove_icon}

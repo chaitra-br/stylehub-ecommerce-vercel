@@ -171,4 +171,29 @@
   .cart-right {
     position: static;
   }
+
+  .cart-product {
+    margin-bottom: 8px;
+  }
+
+  .cart-price::before {
+    content: "Price: ";
+    color: #9ca3af;
+    font-size: 13px;
+    margin-right: 4px;
+  }
+
+  .cart-qty-value::before {
+    content: "Qty: ";
+    color: #9ca3af;
+    font-size: 13px;
+    margin-right: 4px;
+  }
+
+  .cart-total::before {
+    content: "Total: ";
+    color: #9ca3af;
+    font-size: 13px;
+    margin-right: 4px;
+  }
 }

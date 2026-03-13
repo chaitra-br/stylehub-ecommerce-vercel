@@ -7,6 +7,8 @@ import { ShopContext } from "../../Context/ShopContext";
 const ProductDisplay = ({ product }) => {
   const { addToCart } = useContext(ShopContext);
 
+  const isMobile = window.innerWidth <= 900;
+  const [activeIndex, setActiveIndex] = useState(0);
   const [selectedSize, setSelectedSize] = useState(null);
   const [error, setError] = useState(false);
   const [mainImage, setMainImage] = useState(product.image);
@@ -17,12 +19,19 @@ const ProductDisplay = ({ product }) => {
       setError(true);
       return;
     }
+
+    const scrollPos = window.scrollY;
+
     addToCart(product.id, selectedSize);
     setAdded(true);
     setError(false);
 
+    requestAnimationFrame(() => {
+      window.scrollTo(0, scrollPos);
+    });
+
     setTimeout(() => {
-      setAdded(false);  
+      setAdded(false);
     }, 1200);
   };
 
@@ -41,8 +50,40 @@ const ProductDisplay = ({ product }) => {
           ))}
         </div>
 
-        <div className="productdisplay-img">
-          <img src={mainImage} alt="" className="productdisplay-main-img" />
+        <div
+          className="productdisplay-img"
+          onScroll={(e) => {
+            if (!isMobile) return;
+
+            const scrollLeft = e.target.scrollLeft;
+            const width = e.target.clientWidth;
+            const index = Math.round(scrollLeft / width);
+            setActiveIndex(index);
+          }}
+        >
+          {isMobile
+            ? [1, 2, 3, 4].map((_, i) => (
+                <img
+                  key={i}
+                  src={product.image}
+                  alt=""
+                  className="productdisplay-main-img"
+                />
+              ))
+            : (
+                <img
+                  src={mainImage}
+                  alt=""
+                  className="productdisplay-main-img"
+                />
+              )
+          }
+        </div>
+
+        <div className="swipe-dots">
+          {[1, 2, 3, 4].map((_, i) => (
+            <span key={i} className={`dot ${activeIndex === i ? "active" : ""}`}></span>
+          ))}
         </div>
       </div>
 
@@ -88,6 +129,7 @@ const ProductDisplay = ({ product }) => {
         </div>
 
         <button
+          type="button"
           className={`add-btn ${added ? "added" : ""}`}
           onClick={handleAddToCart}
         >

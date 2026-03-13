@@ -23,13 +23,13 @@ const Footer = () => {
         </ul>
 
         <div className="footer-social-icon">
-          <a className="footer-icons-container" href="#">
+          <a className="footer-icons-container" href="https://www.instagram.com">
             <img src={instagram_icon} alt="Instagram" />
           </a>
-          <a className="footer-icons-container" href="#">
+          <a className="footer-icons-container" href="https://www.pinterest.com">
             <img src={pintester_icon} alt="Pinterest" />
           </a>
-          <a className="footer-icons-container" href="#">
+          <a className="footer-icons-container" href="https://www.whatsapp.com">
             <img src={whatsapp_icon} alt="WhatsApp" />
           </a>
         </div>
@@ -37,7 +37,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <hr />
-        <p>© 2023 Style Hub. All rights reserved.</p>
+        <p>© 2026 Style Hub. All rights reserved.</p>
       </div>
     </footer>
   )
